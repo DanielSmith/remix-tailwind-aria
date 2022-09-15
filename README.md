@@ -1,34 +1,22 @@
-# Welcome to Remix!
+# remix-tailwind-aria example
 
-- [Remix Docs](https://remix.run/docs)
-- [Netlify Functions](https://www.netlify.com/products/functions/)
+This is meant to be an example of using remix with tailwind and adobe react-aria components
 
-## Netlify Setup
+They are from the tailwind styled examples at Adobe [react-aria](https://react-spectrum.adobe.com/react-aria/index.html):
 
-1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
+* [useDateRangePicker and useDatePicker](https://react-spectrum.adobe.com/react-aria/useDateRangePicker.html)
+* [useDateField](https://react-spectrum.adobe.com/react-aria/useDateField.html)
+* [useTimeField](https://react-spectrum.adobe.com/react-aria/useTimeField.html)
+* [useTabList](https://react-spectrum.adobe.com/react-aria/useTabList.html)
 
-```sh
-npm i -g netlify-cli
-```
+The files in app/components are taken from codesandbox examples (that are referenced from the react-aria docs)
 
-If you have previously installed the Netlify CLI, you should update it to the latest version:
+See app/routes/index.tsx for the example that ties things together.
 
-```sh
-npm i -g netlify-cli@latest
-```
+For more info about why AlertDialog is broken, see [The gist @ https://gist.github.com/DanielSmith/957a0a0a9d791ab2a95ffb15c5f0e6cd](https://gist.github.com/DanielSmith/957a0a0a9d791ab2a95ffb15c5f0e6cd)
 
-2. Sign up and log in to Netlify:
-
-```sh
-netlify login
-```
-
-3. Create a new site:
-
-```sh
-netlify init
-```
-
+This was quickly hacked together, as I wanted a reference of how to use the react-aria components for a project.  The components are from Devon Govett @ Adobe.  He has done a good job of writing examples that show how to use react-aria with Tailwind CSS.
+                
 ## Development
 
 The Remix dev server starts your app in development mode, rebuilding assets on file changes. To start the Remix dev server:
@@ -39,24 +27,4 @@ npm run dev
 
 Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
 
-The Netlify CLI builds a production version of your Remix App Server and splits it into Netlify Functions that run locally. This includes any custom Netlify functions you've developed. The Netlify CLI runs all of this in its development mode.
 
-```sh
-netlify dev
-```
-
-Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
-
-Note: When running the Netlify CLI, file changes will rebuild assets, but you will not see the changes to the page you are on unless you do a browser refresh of the page. Due to how the Netlify CLI builds the Remix App Server, it does not support hot module reloading.
-
-## Deployment
-
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
-
-```sh
-# preview deployment
-netlify deploy --build
-
-# production deployment
-netlify deploy --build --prod
-```
